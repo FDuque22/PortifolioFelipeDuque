@@ -295,7 +295,48 @@
     color: #fff;
     padding: 40px 50px;
     text-align: center;
-  }
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    position: relative;
+    z-index: 10;
+    }
+
+    footer .footer-conteudo {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+    }
+
+    footer a {
+        color: #ea580c;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: #facc15;
+    }
+
+    footer .redes-sociais {
+        margin-top: 15px;
+    }
+
+    footer .redes-sociais a {
+        display: inline-block;
+        margin: 0 10px;
+        color: #fff;
+        font-size: 20px;
+        transition: transform 0.3s, color 0.3s;
+    }
+
+    footer .redes-sociais a:hover {
+        color: #ea580c;
+        transform: scale(1.2);
+    }
 
 /* Telas até 1024px - Tablets e Laptops menores */
 @media (max-width: 1024px) {
