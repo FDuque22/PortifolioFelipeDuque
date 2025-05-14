@@ -15,7 +15,11 @@
       <span class="branco">Portifólio | Felipe</span> <span class="laranja">Duque</span>
     </h1>
   
-    <nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
+  
+    <nav id="nav-menu" class="nav-menu">
       <a href="#home">INÍCIO</a>
       <a href="#sobre">SOBRE MIM</a>
       <a href="#projetos">PROJETOS</a>
@@ -180,3 +184,12 @@
 
 </body>
 </html>
+
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>

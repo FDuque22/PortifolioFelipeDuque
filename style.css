@@ -422,3 +422,53 @@ footer .redes-sociais a:hover {
       font-size: 14px;
     }
   }
+
+  /* Menu Hamburguer - apenas em telas pequenas */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+  }
+  
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: 0.3s ease;
+  }
+  
+  /* Menu Mobile */
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      right: 50px;
+      background: #111;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+  
+    .menu.active {
+      display: flex;
+    }
+  
+    nav a {
+      margin-left: 0;
+      font-size: 18px;
+    }
+  }
+  
