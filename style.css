@@ -362,3 +362,75 @@ h3:hover {
     transition: transform 0.3s ease;
 }
 
+/* MOBILE FIRST: Ajustes para telas menores que 768px */
+@media (max-width: 768px) {
+
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    nav a {
+      font-size: 18px;
+      padding: 10px;
+      display: block;
+    }
+  
+    .hero h2 {
+      font-size: 22px;
+      text-align: center;
+    }
+  
+    .hero p {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+  
+    .hero a {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  
+    section {
+      padding: 20px 10px;
+    }
+  
+    .projetos-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .projeto {
+      width: 100%;
+    }
+  
+    .projeto img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .linguagens-usadas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    .linguagens-usadas img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    ul.projeto-topicos {
+      padding-left: 20px;
+    }
+  }
+  
