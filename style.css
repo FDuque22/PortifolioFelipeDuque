@@ -151,7 +151,7 @@
   .contato h3,
   .linguagens h3 {
     font-size: 32px;
-    color: #ea580c;
+    color: #ffffff;
     margin-bottom: 20px;
   }
   
@@ -213,7 +213,7 @@
   
   /* Sobre */
   .sobre p {
-    font-size: 18px;
+    font-size: 20px;
     color: #ffffff;
     line-height: 1.8;
     text-align: justify;
