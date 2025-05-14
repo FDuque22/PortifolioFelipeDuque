@@ -56,6 +56,40 @@ nav a:hover {
     -webkit-text-fill-color: transparent;
 }
 
+/* MENU HAMBURGUER */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    nav {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background: #000;
+    }
+  
+    nav a {
+      padding: 15px;
+      border-top: 1px solid #333;
+    }
+  
+    #menu-toggle:checked + .menu-icon + nav {
+      display: flex;
+    }
+  }
+
 section {
     padding: 100px 50px;
 }
@@ -156,55 +190,62 @@ section {
     margin-bottom: 20px;
 }
 
+/* PROJETOS */
 .projetos-grid {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.projeto {
-    display: flex;
-    align-items: flex-start;
-    gap: 25px;
-    background: #1a1a1a;
-    padding: 30px;
-    border-radius: 12px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.projeto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(234, 88, 12, 0.4);
-}
-
-.projeto img {
-    width: 600px;
-    height: auto;
-    border-radius: 8px;
-    flex-shrink: 0;
-}
-
-.projeto-conteudo {
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .projeto {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 350px;
+    flex: 1 1 400px;
     display: flex;
     flex-direction: column;
-}
-
-.projeto h4 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.projeto p {
-    font-size: 16px;
-    color: #ccc;
-    margin-bottom: 15px;
-}
-
-.projeto .linguagens-usadas img {
+  }
+  
+  .projeto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .projeto-conteudo {
+    padding: 20px;
+  }
+  
+  .projeto-conteudo h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .projeto-conteudo p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .projeto-topicos {
+    font-size: 10px;
+    padding-left: 10px;
+  }
+  
+  .linguagens-usadas {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .linguagens-usadas img {
     width: 30px;
-    height: auto;
-    margin-right: 8px;
-}
+    height: 30px;
+  }
 
 .projeto-topicos {
     list-style-type: disc;
@@ -216,6 +257,11 @@ section {
     font-size: 16px;
     color: #ccc;
     margin-bottom: 8px;
+}
+
+.projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(234, 88, 12, 0.4);
 }
 
 .sobre p {
@@ -434,3 +480,19 @@ h3:hover {
     }
   }
   
+/* RESPONSIVO PROJETOS */
+@media (max-width: 768px) {
+    .projetos-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .projeto {
+      width: 90%;
+    }
+  }
+  
+  /* CONTATO ETC */
+  #contato {
+    text-align: center;
+  }
