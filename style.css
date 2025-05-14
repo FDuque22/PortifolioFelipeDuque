@@ -54,6 +54,22 @@
     -webkit-text-fill-color: transparent;
   }
   
+  /* Estilo base do menu */
+/* Estilo padrão */
+    .menu {
+        display: flex;
+        gap: 20px;
+  }
+  
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+  }
+
   /* ========== SEÇÕES GERAIS ========== */
   section {
     padding: 100px 50px;
@@ -438,4 +454,33 @@
       font-size: 13px;
     }
   }
+
+  /* Esconde o menu em telas pequenas */
+  @media (max-width: 768px) {
+    .menu {
+      display: none; /* <- Isso garante que o menu fique escondido */
+      flex-direction: column;
+      gap: 10px;
+      background-color: #111;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px;
+      z-index: 10;
+    }
   
+    .menu.show {
+      display: flex; /* Quando clicado, mostra o menu */
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }

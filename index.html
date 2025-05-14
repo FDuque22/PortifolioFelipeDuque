@@ -11,16 +11,12 @@
 
 <body>
   <header>
-    <h1>
-      <span class="branco">Portifólio | Felipe</span> <span class="laranja">Duque</span>
-    </h1>
+    <h1>Portfólio | <span style="color: orange;">Felipe Duque</span></h1>
   
-    <div class="menu-toggle" id="menu-toggle">
-      <i class="fa fa-bars"></i>
-    </div>
+    <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
   
-    <nav id="nav-menu" class="nav-menu">
-      <a href="#home">INÍCIO</a>
+    <nav class="menu">
+      <a href="#inicio">INÍCIO</a>
       <a href="#sobre">SOBRE MIM</a>
       <a href="#linguagens">LINGUAGENS</a>
       <a href="#projetos">PROJETOS</a>
@@ -213,12 +209,13 @@
   </footer>
 
   <script>
-    const menuToggle = document.getElementById("menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu');
   
-    menuToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
+    toggleBtn.addEventListener('click', () => {
+      menu.classList.toggle('show');
     });
   </script>
+
 </body>
 </html>
