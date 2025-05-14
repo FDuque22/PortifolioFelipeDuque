@@ -340,3 +340,85 @@ footer .redes-sociais a:hover {
     to { opacity: 1; transform: scale(1); }
   }
   
+/* Responsivo para telas menores que 768px */
+@media (max-width: 768px) {
+
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px 20px;
+    }
+  
+    header h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    nav a {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+  
+    section {
+      padding: 80px 20px;
+    }
+  
+    .hero {
+      padding: 80px 20px;
+      background-position: center center;
+    }
+  
+    .hero h2 {
+      font-size: 28px;
+    }
+  
+    .hero p {
+      font-size: 16px;
+    }
+  
+    .hero a {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  
+    .projeto {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .projeto img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .projeto-conteudo {
+      align-items: center;
+    }
+  
+    .linguagens-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .linguagem {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .sobre p {
+      font-size: 16px;
+      padding: 0;
+    }
+  
+    footer {
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+  }
