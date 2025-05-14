@@ -1,4 +1,4 @@
-/* Reset e configurações globais */
+/* ========== RESET E CONFIGURAÇÕES GLOBAIS ========== */
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +10,9 @@
     font-family: 'Poppins', sans-serif;
     background: #0f0f0f;
     color: #fff;
-  }  
-  /* Header */
+  }
+  
+  /* ========== HEADER ========== */
   header {
     background: linear-gradient(270deg, #111, #1a1a1a);
     background-size: 400% 400%;
@@ -38,7 +39,7 @@
     -webkit-text-fill-color: transparent;
   }
   
-  /* Navegação */
+  /* ========== NAVEGAÇÃO ========== */
   nav a {
     margin-left: 9px;
     text-decoration: none;
@@ -53,12 +54,32 @@
     -webkit-text-fill-color: transparent;
   }
   
-  /* Seções */
+  /* ========== SEÇÕES GERAIS ========== */
   section {
     padding: 100px 50px;
   }
   
-  /* Hero */
+  .projetos,
+  .sobre,
+  .contato,
+  .linguagens {
+    background: #111;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+  }
+  
+  .projetos h3,
+  .sobre h3,
+  .contato h3,
+  .linguagens h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  /* ========== HERO ========== */
   .hero {
     position: relative;
     display: flex;
@@ -76,10 +97,8 @@
   .hero::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.8);
     z-index: 0;
   }
@@ -110,6 +129,7 @@
     color: #e0e0e0;
   }
   
+  /* ========== BOTÕES GERAIS (Hero e Contato) ========== */
   .hero a,
   .contato .links-sociais a {
     display: inline-flex;
@@ -133,28 +153,7 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
   }
   
-  /* Seções principais */
-  .projetos,
-  .sobre,
-  .contato,
-  .linguagens {
-    background: #111;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
-  }
-  
-  .projetos h3,
-  .sobre h3,
-  .contato h3,
-  .linguagens h3 {
-    font-size: 32px;
-    color: #ffffff;
-    margin-bottom: 20px;
-  }
-  
-  /* Projetos */
+  /* ========== PROJETOS ========== */
   .projetos-grid {
     display: flex;
     flex-direction: column;
@@ -206,36 +205,38 @@
     padding-left: 20px;
   }
   
-  /* Linguagens usadas */
+  /* Linguagens usadas em projetos */
   .projeto .linguagens-usadas img {
     margin-top: 45px;
     width: 30px;
     margin-right: 5px;
   }
   
-  /* Sobre */
+  /* ========== SOBRE ========== */
   .sobre p {
     font-size: 20px;
-    color: #ffffff;
+    color: #fff;
     line-height: 1.8;
     text-align: justify;
     font-weight: 300;
     padding: 0 10px;
   }
   
-  /* Linguagens */
+  /* ========== LINGUAGENS ========== */
   .linguagens-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   
   .linguagem {
     background: #1a1a1a;
     border-radius: 12px;
     padding: 20px;
-    width: 150px;
+    width: 100px;
     height: 120px;
     display: flex;
     flex-direction: column;
@@ -271,109 +272,79 @@
   .linguagem:hover img {
     transform: rotate(10deg) scale(1.2);
   }
-
+  
+  /* ========== FOOTER ========== */
   footer {
     background: #0f0f0f;
     color: #fff;
     padding: 40px 50px;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 16px;
-    position: relative;
-    z-index: 10;
-    }
-
-    footer .footer-conteudo {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    footer p {
-        margin-bottom: 10px;
-        line-height: 1.6;
-    }
-
-    footer a {
-        color: #ea580c;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    footer a:hover {
-        color: #facc15;
-    }
-
-    footer .redes-sociais {
-        margin-top: 15px;
-    }
-
-    footer .redes-sociais a {
-        display: inline-block;
-        margin: 0 10px;
-        color: #fff;
-        font-size: 20px;
-        transition: transform 0.3s, color 0.3s;
-    }
-
-    footer .redes-sociais a:hover {
-        color: #facc15;
-        transform: scale(1.2);
-    }
-  
-  /* Animações */
-  @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
   }
-  
-  @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-  }
-  
-/* Responsivo para telas menores que 768px */
-@media (max-width: 768px) {
 
+/* Telas até 1024px - Tablets e Laptops menores */
+@media (max-width: 1024px) {
     header {
+      padding: 20px 30px;
       flex-direction: column;
       align-items: flex-start;
+    }
+  
+    nav a {
+      font-size: 17px;
+      margin-left: 5px;
+    }
+  
+    .hero h2 {
+      font-size: 32px;
+    }
+  
+    .hero p {
+      font-size: 18px;
+    }
+  
+    .projeto {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .projeto img {
+      width: 100%;
+    }
+  
+    .projeto-conteudo {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  /* Telas até 768px - Tablets pequenos e celulares grandes */
+  @media (max-width: 768px) {
+    section {
+      padding: 80px 20px;
+    }
+  
+    header {
       padding: 15px 20px;
     }
   
     header h1 {
       font-size: 20px;
-      margin-bottom: 10px;
+      text-align: center;
+      width: 100%;
     }
   
     nav {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
       width: 100%;
-    }
-  
-    nav a {
-      margin: 5px 0;
-      font-size: 18px;
-    }
-  
-    section {
-      padding: 80px 20px;
+      margin-top: 10px;
     }
   
     .hero {
       padding: 80px 20px;
-      background-position: center center;
+      min-height: auto;
     }
   
     .hero h2 {
@@ -385,38 +356,34 @@
     }
   
     .hero a {
-      font-size: 14px;
-      padding: 10px 20px;
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  
+    .projetos-grid {
+      gap: 15px;
     }
   
     .projeto {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .projeto img {
-      width: 100%;
-      height: auto;
-    }
-  
-    .projeto-conteudo {
-      align-items: center;
+      padding: 20px;
     }
   
     .linguagens-grid {
-      flex-direction: column;
-      align-items: center;
+      gap: 10px;
     }
   
     .linguagem {
-      width: 90px;
+      width: 80px;
       height: 100px;
+    }
+  
+    .linguagem img {
+      width: 30px;
+      height: 30px;
     }
   
     .sobre p {
       font-size: 16px;
-      padding: 0;
     }
   
     footer {
@@ -425,57 +392,50 @@
     }
   }
   
-/* Estilização do menu hambúrguer */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    font-size: 28px;
-    color: white;
-  }
-  
-  /* Para dispositivos móveis */
-  @media (max-width: 768px) {
-    .menu-toggle {
-      display: block;
+  /* Telas até 480px - Smartphones */
+  @media (max-width: 480px) {
+    .hero h2 {
+      font-size: 24px;
     }
   
-    nav.nav-menu {
-      display: none;
-      flex-direction: column;
-      background-color: #222;
-      position: absolute;
-      top: 70px;
-      right: 0;
-      width: 100%;
-      padding: 20px;
+    .hero p {
+      font-size: 14px;
     }
   
-    nav.nav-menu a {
-      margin: 10px 0;
-      color: white;
-      text-align: center;
+    .hero a {
+      font-size: 11px;
+      padding: 5px 8px;
     }
   
-    nav.nav-menu.active {
-      display: flex;
+    .projeto h4 {
+      font-size: 14px;
     }
-  }
-/* Responsivo para dispositivos móveis */
-@media (max-width: 768px) {
-    .linguagens-grid {
-        justify-content: center;
-      }
+  
+    .projeto p,
+    .projeto-topicos li {
+      font-size: 13px;
+    }
+  
     .linguagem {
-      width: calc(50% - 20px);
-      padding: 10px;
+      width: 70px;
+      height: 90px;
+    }
+  
+    .linguagem::before {
+      width: 30px;
     }
   
     .linguagem img {
-      width: 40px;
-      height: 40px;
+      width: 24px;
+      height: 24px;
     }
   
-    .linguagem span {
-      font-size: 15px;
+    .sobre p {
+      font-size: 14px;
+    }
+  
+    footer {
+      font-size: 13px;
     }
   }
+  
