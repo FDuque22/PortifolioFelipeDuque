@@ -423,52 +423,38 @@ footer .redes-sociais a:hover {
     }
   }
 
-  /* Menu Hamburguer - apenas em telas pequenas */
+/* Estilização do menu hambúrguer */
 .menu-toggle {
     display: none;
-    flex-direction: column;
     cursor: pointer;
-    gap: 6px;
+    font-size: 28px;
+    color: white;
   }
   
-  .menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    transition: 0.3s ease;
-  }
-  
-  /* Menu Mobile */
-  .menu {
-    display: flex;
-    gap: 20px;
-  }
-  
+  /* Para dispositivos móveis */
   @media (max-width: 768px) {
     .menu-toggle {
-      display: flex;
+      display: block;
     }
   
-    .menu {
+    nav.nav-menu {
       display: none;
       flex-direction: column;
+      background-color: #222;
       position: absolute;
-      top: 80px;
-      right: 50px;
-      background: #111;
+      top: 70px;
+      right: 0;
+      width: 100%;
       padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-      z-index: 999;
     }
   
-    .menu.active {
+    nav.nav-menu a {
+      margin: 10px 0;
+      color: white;
+      text-align: center;
+    }
+  
+    nav.nav-menu.active {
       display: flex;
     }
-  
-    nav a {
-      margin-left: 0;
-      font-size: 18px;
-    }
   }
-  
